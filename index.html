@@ -137,6 +137,13 @@
         .education p, .projects p {
             font-size: 12px !important; /* Enforced font size */
         }
+
+        /* Bullet points for Education and Projects */
+        .education ul, .projects ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 12px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -195,14 +202,18 @@
 
         <div class="section">
             <h2 class="section-title">Education</h2>
-            <p>B.Sc. in Computer Science - University of Technology (2021)</p>
+            <ul class="education">
+                <li>B.Sc. in Computer Science - University of Technology (2021)</li>
+            </ul>
         </div>
 
         <div class="section">
             <h2 class="section-title">Projects</h2>
-            <p><strong>Project 1:</strong> <a href="https://github.com/johndoe/project1" target="_blank">GitHub Link</a> - A PHP-based application for managing tasks.</p>
-            <p><strong>Project 2:</strong> <a href="https://github.com/johndoe/project2" target="_blank">GitHub Link</a> - A real-time chat application built with Node.js and WebSocket.</p>
-            <p><strong>Project 3:</strong> <a href="https://github.com/johndoe/project3" target="_blank">GitHub Link</a> - A personal blog site developed with Laravel and MySQL.</p>
+            <ul class="projects">
+                <li><strong>Project 1:</strong> <a href="https://github.com/johndoe/project1" target="_blank">GitHub Link</a> - A PHP-based application for managing tasks.</li>
+                <li><strong>Project 2:</strong> <a href="https://github.com/johndoe/project2" target="_blank">GitHub Link</a> - A real-time chat application built with Node.js and WebSocket.</li>
+                <li><strong>Project 3:</strong> <a href="https://github.com/johndoe/project3" target="_blank">GitHub Link</a> - A personal blog site developed with Laravel and MySQL.</li>
+            </ul>
         </div>
     </div>
 </body>

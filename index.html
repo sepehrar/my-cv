@@ -6,7 +6,7 @@
     <title>My CV</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
@@ -19,6 +19,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
             page-break-before: always;
             page-break-inside: avoid;
         }
@@ -45,13 +46,39 @@
         .section {
             margin-bottom: 20px;
         }
-        .work-experience ul {
+        .work-experience, .skills ul {
+            font-family: 'Roboto', sans-serif;
             font-size: 14px;
             color: #555;
         }
         .work-experience li {
             padding-left: 20px;
             margin-bottom: 8px;
+        }
+        /* Skills section styles */
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap; /* Allows the items to wrap into new lines */
+            justify-content: space-between;
+        }
+        .skills li {
+            display: inline-block;
+            width: 22%; /* 4 skills per line, with some margin */
+            margin-bottom: 10px;
+            font-size: 12px; /* Smaller font size for skills */
+            position: relative;
+            padding-left: 20px;
+        }
+        .skills li:before {
+            content: "\2022"; /* Unicode for bullet point */
+            font-size: 20px;
+            color: #4CAF50; /* Green bullet */
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         .section-title {
             background-color: #f1f1f1;
@@ -81,6 +108,8 @@
                 opacity: 1;
             }
         }
+
+        /* Make the content more compact */
         @media print {
             body {
                 font-size: 12px;
@@ -99,17 +128,14 @@
             .contact-info {
                 font-size: 12px;
             }
-            .work-experience li, .education p, .projects p {
-                font-size: 12px;
+            .work-experience li, .skills li, .education p, .projects p {
+                font-size: 12px; /* Same font size as skills section */
             }
         }
+
+        /* Specific smaller font size for Education and Projects sections */
         .education p, .projects p {
-            font-size: 12px !important;
-        }
-        .education ul, .projects ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            font-size: 12px;
+            font-size: 12px !important; /* Enforced font size */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -122,6 +148,7 @@
             <span class="icons">📞 +123 456 7890</span>
             <span class="icons">🔗 <a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn</a></span>
         </div>
+
         <div class="section">
             <h2 class="section-title">Work Experience</h2>
             <div class="work-experience">
@@ -149,19 +176,33 @@
                 </ul>
             </div>
         </div>
+
         <div class="section">
-            <h2 class="section-title">Education</h2>
-            <ul class="education">
-                <li>B.Sc. in Computer Science - University of Technology (2021)</li>
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills">
+                <li>PHP (Laravel, CodeIgniter)</li>
+                <li>JavaScript (Node.js, Express)</li>
+                <li>Database Management (MySQL, PostgreSQL)</li>
+                <li>Problem Solving</li>
+                <li>REST API Development</li>
+                <li>Version Control (Git/GitHub)</li>
+                <li>Web Frameworks (Laravel, Express.js)</li>
+                <li>Debugging</li>
+                <li>Agile Development</li>
+                <li>Unit Testing</li>
             </ul>
         </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <p>B.Sc. in Computer Science - University of Technology (2021)</p>
+        </div>
+
         <div class="section">
             <h2 class="section-title">Projects</h2>
-            <ul class="projects">
-                <li><strong>Project 1:</strong> <a href="https://github.com/johndoe/project1" target="_blank">GitHub Link</a> - A PHP-based application for managing tasks.</li>
-                <li><strong>Project 2:</strong> <a href="https://github.com/johndoe/project2" target="_blank">GitHub Link</a> - A real-time chat application built with Node.js and WebSocket.</li>
-                <li><strong>Project 3:</strong> <a href="https://github.com/johndoe/project3" target="_blank">GitHub Link</a> - A personal blog site developed with Laravel and MySQL.</li>
-            </ul>
+            <p><strong>Project 1:</strong> <a href="https://github.com/johndoe/project1" target="_blank">GitHub Link</a> - A PHP-based application for managing tasks.</p>
+            <p><strong>Project 2:</strong> <a href="https://github.com/johndoe/project2" target="_blank">GitHub Link</a> - A real-time chat application built with Node.js and WebSocket.</p>
+            <p><strong>Project 3:</strong> <a href="https://github.com/johndoe/project3" target="_blank">GitHub Link</a> - A personal blog site developed with Laravel and MySQL.</p>
         </div>
     </div>
 </body>

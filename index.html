@@ -51,18 +51,19 @@
             font-size: 14px;
             color: #555;
         }
-        .work-experience li, .skills li {
+        .work-experience li {
             padding-left: 20px;
             margin-bottom: 8px;
         }
         .skills ul {
-            display: flex; /* This makes the list items appear in a row */
-            flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-            gap: 15px; /* Adds space between items */
+            display: grid;  /* Use grid to arrange items in a row */
+            grid-template-columns: repeat(4, 1fr); /* Display 4 items per row */
+            gap: 15px;  /* Add space between items */
+            list-style-type: disc; /* Adds bullet points */
+            padding-left: 20px; /* Add padding to align bullets properly */
         }
         .skills li {
             font-size: 12px; /* Smaller font size for Skills */
-            list-style-type: none; /* Remove default list bullets */
             background-color: #f1f1f1;
             padding: 8px;
             border-radius: 5px;
@@ -178,6 +179,10 @@
                 <li>REST API Development</li>
                 <li>Version Control (Git/GitHub)</li>
                 <li>Web Frameworks (Laravel, Express.js)</li>
+                <li>Problem Solving</li>
+                <li>Debugging</li>
+                <li>Agile Development</li>
+                <li>Unit Testing</li>
             </ul>
         </div>
 

@@ -19,13 +19,10 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
-            page-break-before: always;
-            page-break-inside: avoid;
         }
         h1 {
             text-align: center;
-            color: #4CAF50; /* Green for the header */
+            color: #4CAF50;
             font-size: 24px;
         }
         h2 {
@@ -46,169 +43,58 @@
         .section {
             margin-bottom: 20px;
         }
-        .work-experience, .skills ul, .education ul, .projects ul {
-            font-family: 'Roboto', sans-serif;
+        .work-experience, .education, .projects {
             font-size: 14px;
-            color: #555;
         }
-        .work-experience li, .education li, .projects li, .skills li {
-            padding-left: 20px;
-            margin-bottom: 8px;
-        }
-        /* Unified Bullet points for all sections */
         ul {
             list-style-type: disc;
             padding-left: 20px;
         }
         li {
-            font-size: 12px; /* Same font size across the board */
-        }
-        .skills ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding-left: 0;
-        }
-        .skills li {
-            width: 22%; /* 4 skills per line */
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-        .skills li:before {
-            content: "\2022"; /* Unicode for bullet point */
-            font-size: 16px;
-            color: #4CAF50; /* Green bullet */
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        .section-title {
-            background-color: #f1f1f1;
-            padding: 8px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .icons {
-            margin-right: 10px;
-        }
-        .work-experience li:hover {
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            padding: 8px;
-            transition: 0.3s ease;
-        }
-        .container {
-            animation: fadeIn 1s ease;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Make the content more compact */
-        @media print {
-            body {
-                font-size: 12px;
-                line-height: 1.4;
-            }
-            .container {
-                margin: 10px;
-                padding: 15px;
-            }
-            h1 {
-                font-size: 20px;
-            }
-            h2 {
-                font-size: 16px;
-            }
-            .contact-info {
-                font-size: 12px;
-            }
-            .work-experience li, .skills li, .education p, .projects p {
-                font-size: 12px; /* Same font size as skills section */
-            }
-        }
-
-        /* Specific smaller font size for Education and Projects sections */
-        .education p, .projects p {
-            font-size: 12px !important; /* Enforced font size */
+            font-size: 12px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>John Doe</h1>
         <div class="contact-info">
-            <span class="icons">📧 johndoe@email.com</span>
-            <span class="icons">📞 +123 456 7890</span>
-            <span class="icons">🔗 <a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn</a></span>
+            <span>📧 johndoe@email.com</span>
+            <span>📞 +123 456 7890</span>
+            <span>🔗 <a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn</a></span>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="work-experience">
-                <ul>
-                    <li>
-                        <strong>Junior Backend Developer</strong> - ABC Tech (2022 - Present)
-                        <ul>
-                            <li>Developed and maintained PHP-based backend applications.</li>
-                            <li>Collaborated with frontend developers to integrate APIs.</li>
-                            <li>Optimized SQL queries for MySQL databases.</li>
-                            <li>Ensured high-level security standards for all web applications.</li>
-                            <li>Participated in Agile development sprints, contributing to code reviews and testing.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Intern Developer</strong> - XYZ Solutions (2021 - 2022)
-                        <ul>
-                            <li>Assisted in creating and testing RESTful APIs.</li>
-                            <li>Built reusable PHP components and modules for web projects.</li>
-                            <li>Helped debug and troubleshoot existing applications.</li>
-                            <li>Contributed to client-facing features using JavaScript.</li>
-                            <li>Worked closely with the team to ensure timely project deliveries.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Skills</h2>
-            <ul class="skills">
-                <li>PHP (Laravel, CodeIgniter)</li>
-                <li>JavaScript (Node.js, Express)</li>
-                <li>Database Management (MySQL, PostgreSQL)</li>
-                <li>Problem Solving</li>
-                <li>REST API Development</li>
-                <li>Version Control (Git/GitHub)</li>
-                <li>Web Frameworks (Laravel, Express.js)</li>
-                <li>Debugging</li>
-                <li>Agile Development</li>
-                <li>Unit Testing</li>
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <strong>Junior Backend Developer</strong> - ABC Tech (2022 - Present)
+                    <ul>
+                        <li>Developed and maintained PHP-based backend applications.</li>
+                        <li>Collaborated with frontend developers to integrate APIs.</li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Education</h2>
-            <ul class="education">
+            <h2>Skills</h2>
+            <p>PHP (Laravel, CodeIgniter) • JavaScript (Node.js, Express) • Database Management (MySQL, PostgreSQL) • Problem Solving</p>
+            <p>REST API Development • Version Control (Git/GitHub) • Web Frameworks (Laravel, Express.js) • Debugging</p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
                 <li>B.Sc. in Computer Science - University of Technology (2021)</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Projects</h2>
-            <ul class="projects">
-                <li><strong>Project 1:</strong> <a href="https://github.com/johndoe/project1" target="_blank">GitHub Link</a> - A PHP-based application for managing tasks.</li>
-                <li><strong>Project 2:</strong> <a href="https://github.com/johndoe/project2" target="_blank">GitHub Link</a> - A real-time chat application built with Node.js and WebSocket.</li>
-                <li><strong>Project 3:</strong> <a href="https://github.com/johndoe/project3" target="_blank">GitHub Link</a> - A personal blog site developed with Laravel and MySQL.</li>
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Project 1:</strong> <a href="https://github.com/johndoe/project1" target="_blank">GitHub Link</a></li>
+                <li><strong>Project 2:</strong> <a href="https://github.com/johndoe/project2" target="_blank">GitHub Link</a></li>
             </ul>
         </div>
     </div>

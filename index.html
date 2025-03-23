@@ -46,7 +46,7 @@
         .section {
             margin-bottom: 20px;
         }
-        .work-experience, .education p {
+        .work-experience, .skills ul {
             font-family: 'Roboto', sans-serif;
             font-size: 14px;
             color: #555;
@@ -55,16 +55,22 @@
             padding-left: 20px;
             margin-bottom: 8px;
         }
-        .skills li, .projects p {
-            font-size: 12px;
+        .skills ul {
+            display: flex; /* This makes the list items appear in a row */
+            flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+            gap: 15px; /* Adds space between items */
         }
         .skills li {
-            list-style-type: circle;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            font-size: 12px; /* Smaller font size for Skills */
+            list-style-type: none; /* Remove default list bullets */
+            background-color: #f1f1f1;
+            padding: 8px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .skills li:hover {
-            color: #4CAF50;
+            background-color: #4CAF50;
+            color: white;
         }
         .section-title {
             background-color: #f1f1f1;
@@ -114,26 +120,25 @@
             .contact-info {
                 font-size: 12px;
             }
-            .work-experience li, .skills li, .education p {
+            .work-experience li, .skills li, .education p, .projects p {
                 font-size: 12px;
             }
-            .projects p {
-                font-size: 11px;
-            }
         }
-                .education p, .projects p {
-            font-size: 12px !important; /* Enforced font size */
+
+        /* Specific smaller font size for Education and Projects sections */
+        .education p, .projects p {
+            font-size: 10px !important; /* Enforced font size */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Mahdiyeh Sepehrar</h1>
+        <h1>John Doe</h1>
         <div class="contact-info">
-            <span class="icons">📧 sepehrar@yahoo.com</span>
-            <span class="icons">📞56701953</span>
-            <span class="icons">🔗 <a href="https://www.linkedin.com/in/mahdiyeh-sepehrar-51a08516a/" target="_blank">LinkedIn</a></span>
+            <span class="icons">📧 johndoe@email.com</span>
+            <span class="icons">📞 +123 456 7890</span>
+            <span class="icons">🔗 <a href="https://www.linkedin.com/in/johndoe" target="_blank">LinkedIn</a></span>
         </div>
 
         <div class="section">
@@ -141,21 +146,23 @@
             <div class="work-experience">
                 <ul>
                     <li>
-                        <strong>Junior Backend Developer</strong> - Sinine Lihtne OÜ (2024/11 - Present)
+                        <strong>Junior Backend Developer</strong> - ABC Tech (2022 - Present)
                         <ul>
-                            <li>1.Developed and maintained PHP-based backend applications using PHP frameworks/symfony.2.Wrote optimized SQL queries to retrieve data efficiently from MySQL databases3.Wrote optimized SQL queries to retrieve data efficiently from MySQL databases.4.Designing, creating, and managing relational databases( MariaDB,MySQL).5.Wrote unit tests and fixed issues and bugs.6.Participated in Agile development sprints, contributing to code reviews and testing.</li>
+                            <li>Developed and maintained PHP-based backend applications.</li>
+                            <li>Collaborated with frontend developers to integrate APIs.</li>
+                            <li>Optimized SQL queries for MySQL databases.</li>
+                            <li>Ensured high-level security standards for all web applications.</li>
+                            <li>Participated in Agile development sprints, contributing to code reviews and testing.</li>
                         </ul>
                     </li>
                     <li>
-                        <strong>Data Entry Specialist</strong> - Sinine Lihtne OÜ (2022/4 - 2023/11)
+                        <strong>Intern Developer</strong> - XYZ Solutions (2021 - 2022)
                         <ul>
-                            <li>1.Entering, updating, and verifying data in databases, spreadsheets, or software systems2.Transferring data from paper formats into digital files with high accuracy.3.Reviewing and correcting errors in entered data.4. Working with teams to collect, verify, and process information.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Intern Product Owner/Analyst</strong> - Kuehne+Nagel  (2021/11 - 2022/1)
-                        <ul>
-                            <li>Learning the market and customers needs for Retail Management Software.1. Defining the product vision. 2. Define database structure in SQL. 3. Analyze and define requirements and tasks.4. Describe product features and user stories in JIRA.</li>
+                            <li>Assisted in creating and testing RESTful APIs.</li>
+                            <li>Built reusable PHP components and modules for web projects.</li>
+                            <li>Helped debug and troubleshoot existing applications.</li>
+                            <li>Contributed to client-facing features using JavaScript.</li>
+                            <li>Worked closely with the team to ensure timely project deliveries.</li>
                         </ul>
                     </li>
                 </ul>
@@ -165,25 +172,25 @@
         <div class="section">
             <h2 class="section-title">Skills</h2>
             <ul class="skills">
-                <li>PHP(symfony)</li>
-                <li>SQL</li>
-                <li>Database Management (MariaDb,MySQL)</li>
+                <li>PHP (Laravel, CodeIgniter)</li>
+                <li>JavaScript (Node.js, Express)</li>
+                <li>Database Management (MySQL, PostgreSQL)</li>
                 <li>REST API Development</li>
                 <li>Version Control (Git/GitHub)</li>
-                <li>Frameworks (symfony)</li>
-                <li>Communication</li>
+                <li>Web Frameworks (Laravel, Express.js)</li>
             </ul>
         </div>
 
         <div class="section">
             <h2 class="section-title">Education</h2>
-            <p>M.Sc. in Geoinformatics - University of Tartu (2021)</p>
+            <p>B.Sc. in Computer Science - University of Technology (2021)</p>
         </div>
 
         <div class="section">
             <h2 class="section-title">Projects</h2>
             <p><strong>Project 1:</strong> <a href="https://github.com/johndoe/project1" target="_blank">GitHub Link</a> - A PHP-based application for managing tasks.</p>
             <p><strong>Project 2:</strong> <a href="https://github.com/johndoe/project2" target="_blank">GitHub Link</a> - A real-time chat application built with Node.js and WebSocket.</p>
+            <p><strong>Project 3:</strong> <a href="https://github.com/johndoe/project3" target="_blank">GitHub Link</a> - A personal blog site developed with Laravel and MySQL.</p>
         </div>
     </div>
 </body>

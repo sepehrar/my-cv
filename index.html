@@ -74,3 +74,80 @@
             background-color: #f9f9f9;
             border-radius: 5px;
             padding: 10px;
+            transition: 0.3s ease;
+        }
+        /* Add some subtle animation */
+        .container {
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>John Doe</h1>
+        <div class="contact-info">
+            <span class="icons">📧 johndoe@email.com</span>
+            <span class="icons">📞 +123 456 7890</span>
+        </div>
+
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>A passionate Junior Developer skilled in PHP, JavaScript, and backend development. Focused on building robust, scalable applications and improving the user experience.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="work-experience">
+                <ul>
+                    <li>
+                        <strong>Junior Backend Developer</strong> - ABC Tech (2022 - Present)
+                        <ul>
+                            <li>Developed and maintained PHP-based backend applications.</li>
+                            <li>Collaborated with frontend developers to integrate APIs.</li>
+                            <li>Optimized SQL queries for MySQL databases.</li>
+                            <li>Ensured high-level security standards for all web applications.</li>
+                            <li>Participated in Agile development sprints, contributing to code reviews and testing.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Intern Developer</strong> - XYZ Solutions (2021 - 2022)
+                        <ul>
+                            <li>Assisted in creating and testing RESTful APIs.</li>
+                            <li>Built reusable PHP components and modules for web projects.</li>
+                            <li>Helped debug and troubleshoot existing applications.</li>
+                            <li>Contributed to client-facing features using JavaScript.</li>
+                            <li>Worked closely with the team to ensure timely project deliveries.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills">
+                <li>PHP (Laravel, CodeIgniter)</li>
+                <li>JavaScript (Node.js, Express)</li>
+                <li>Database Management (MySQL, PostgreSQL)</li>
+                <li>REST API Development</li>
+                <li>Version Control (Git/GitHub)</li>
+                <li>Web Frameworks (Laravel, Express.js)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <p>B.Sc. in Computer Science - University of Technology (2021)</p>
+        </div>
+    </div>
+</body>
+</html>

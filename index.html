@@ -25,7 +25,7 @@
         }
         h1 {
             text-align: center;
-            color: #4CAF50;
+            color: #4CAF50; /* Green for the header */
             font-size: 24px;
         }
         h2 {
@@ -46,35 +46,38 @@
         .section {
             margin-bottom: 20px;
         }
-        .work-experience, .skills ul {
+        .work-experience, .skills ul, .education ul, .projects ul {
             font-family: 'Roboto', sans-serif;
             font-size: 14px;
             color: #555;
         }
-        .work-experience li {
+        .work-experience li, .education li, .projects li, .skills li {
             padding-left: 20px;
             margin-bottom: 8px;
         }
-        /* Skills section styles */
+        /* Unified Bullet points for all sections */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            font-size: 12px; /* Same font size across the board */
+        }
         .skills ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
             display: flex;
-            flex-wrap: wrap; /* Allows the items to wrap into new lines */
+            flex-wrap: wrap;
             justify-content: space-between;
+            padding-left: 0;
         }
         .skills li {
-            display: inline-block;
-            width: 22%; /* 4 skills per line, with some margin */
+            width: 22%; /* 4 skills per line */
             margin-bottom: 10px;
-            font-size: 12px; /* Smaller font size for skills */
             position: relative;
             padding-left: 20px;
         }
         .skills li:before {
             content: "\2022"; /* Unicode for bullet point */
-            font-size: 20px;
+            font-size: 16px;
             color: #4CAF50; /* Green bullet */
             position: absolute;
             left: 0;
@@ -136,13 +139,6 @@
         /* Specific smaller font size for Education and Projects sections */
         .education p, .projects p {
             font-size: 12px !important; /* Enforced font size */
-        }
-
-        /* Bullet points for Education and Projects */
-        .education ul, .projects ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            font-size: 12px;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">

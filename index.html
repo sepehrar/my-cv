@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional CV</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -149,23 +151,19 @@
     <button class="download-btn" onclick="downloadPDF()">Download as PDF</button>
 
     <script>
-        function downloadPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            doc.text("Your Name - CV", 20, 10);
-            doc.text("Email: your.email@example.com", 20, 20);
-            doc.text("Phone: +1234567890", 20, 30);
-            doc.text("LinkedIn: linkedin.com/in/yourprofile", 20, 40);
-            doc.text("Work Experience:", 20, 50);
-            doc.text("Job Title - Company Name (Year - Year)", 20, 60);
-            doc.text("Education:", 20, 70);
-            doc.text("Degree - University Name (Year - Year)", 20, 80);
-            doc.text("Skills:", 20, 90);
-            doc.text("Skill 1, Skill 2, Skill 3, Skill 4", 20, 100);
-            doc.text("Projects:", 20, 110);
-            doc.text("Project Name - GitHub Repo", 20, 120);
-            doc.save("cv.pdf");
-        }
+function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    
+    html2canvas(document.querySelector("#cv")).then(canvas => {
+        let imgData = canvas.toDataURL("image/png");
+        let doc = new jsPDF("p", "mm", "a4");
+        let imgWidth = 190; // Fit width within A4 page
+        let imgHeight = (canvas.height * imgWidth) / canvas.width;
+        
+        doc.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
+        doc.save("cv.pdf");
+    });
+}
     </script>
 </body>
 </html>

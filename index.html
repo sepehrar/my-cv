@@ -6,11 +6,16 @@
     <title>Professional CV</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: #fff;
         }
         .container {
             width: 60%;
@@ -19,6 +24,10 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .dark-mode .container {
+            background: #333;
         }
         .header {
             text-align: center;
@@ -40,6 +49,11 @@
             border-bottom: 2px solid #6ca675;
             padding-bottom: 5px;
             color: #6ca675;
+            cursor: pointer;
+        }
+        .content {
+            display: none;
+            padding: 10px 0;
         }
         .skills {
             display: grid;
@@ -53,6 +67,41 @@
             padding: 10px;
             border-radius: 5px;
             font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .skill:hover {
+            transform: scale(1.1);
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress {
+            height: 10px;
+            background-color: #66a3ff;
+            width: 0%;
+            transition: width 1s ease-in-out;
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+            color: #66a3ff;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #004080;
+        }
+        .contact-form {
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -60,42 +109,59 @@
     <div class="container">
         <div class="header">
             <h1>Your Name</h1>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            <button onclick="downloadResume()">Download Resume</button>
         </div>
         <div class="contact">
             <p>Email: your.email@example.com | Phone: +1234567890 | LinkedIn: linkedin.com/in/yourprofile</p>
         </div>
         
-        <div class="section">
+        <div class="section" onclick="toggleSection(this)">
             <h2>Work Experience</h2>
-            <p><strong>Job Title - Company Name</strong></p>
-            <p>Year - Year | Responsibilities and achievements.</p>
+            <div class="content">
+                <p><strong>Job Title - Company Name</strong></p>
+                <p>Year - Year | Responsibilities and achievements.</p>
+            </div>
         </div>
         
         <div class="section">
             <h2>Skills</h2>
             <div class="skills">
-                <div class="skill">Skill 1</div>
-                <div class="skill">Skill 2</div>
-                <div class="skill">Skill 3</div>
-                <div class="skill">Skill 4</div>
-                <div class="skill">Skill 5</div>
-                <div class="skill">Skill 6</div>
-                <div class="skill">Skill 7</div>
-                <div class="skill">Skill 8</div>
+                <div class="skill">Skill 1<div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></div>
+                <div class="skill">Skill 2<div class="progress-bar"><div class="progress" style="width: 70%;"></div></div></div>
+                <div class="skill">Skill 3<div class="progress-bar"><div class="progress" style="width: 90%;"></div></div></div>
+                <div class="skill">Skill 4<div class="progress-bar"><div class="progress" style="width: 85%;"></div></div></div>
             </div>
         </div>
         
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong>Degree - University Name</strong></p>
-            <p>Year of Graduation</p>
+        <div class="social-icons">
+            <a href="#">🔗 GitHub</a>
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">🔗 Portfolio</a>
         </div>
         
-        <div class="section">
-            <h2>Projects</h2>
-            <p><strong>Project Name</strong></p>
-            <p>Description of the project and technologies used.</p>
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required><br>
+                <input type="email" placeholder="Your Email" required><br>
+                <textarea placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+        function downloadResume() {
+            window.location.href = 'your-resume.pdf';
+        }
+        function toggleSection(section) {
+            let content = section.querySelector('.content');
+            content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>

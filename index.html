@@ -86,6 +86,30 @@
         .download-btn:hover {
             background: #002a5e;
         }
+        @media print {
+  body {
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    margin: 0;
+    padding: 10mm;
+    font-size: 12px; /* Adjust for readability */
+  }
+  /* Remove unnecessary elements */
+  nav, footer {
+    display: none;
+  }
+
+  /* Ensure sections fit well */
+  section {
+    page-break-inside: avoid;
+  }
+
+  /* Adjust scaling */
+  * {
+    max-width: 100%;
+  }
+}
+            
     </style>
 </head>
 <body>
